@@ -11,6 +11,8 @@
 		DB10F0E72C636C66009A28CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10F0E62C636C66009A28CA /* ContentView.swift */; };
 		DB10F0E92C636C66009A28CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB10F0E82C636C66009A28CA /* Assets.xcassets */; };
 		DB10F0EC2C636C66009A28CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB10F0EB2C636C66009A28CA /* Preview Assets.xcassets */; };
+		DB10F0F32C636C96009A28CA /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10F0F22C636C96009A28CA /* Song.swift */; };
+		DB10F0F52C6371CC009A28CA /* SongCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB10F0F42C6371CC009A28CA /* SongCollection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		DB10F0E62C636C66009A28CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB10F0E82C636C66009A28CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB10F0EB2C636C66009A28CA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DB10F0F22C636C96009A28CA /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		DB10F0F42C6371CC009A28CA /* SongCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCollection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				DB10F0E42C636C66009A28CA /* CDArkive2App.swift */,
 				DB10F0E62C636C66009A28CA /* ContentView.swift */,
+				DB10F0F22C636C96009A28CA /* Song.swift */,
+				DB10F0F42C6371CC009A28CA /* SongCollection.swift */,
 				DB10F0E82C636C66009A28CA /* Assets.xcassets */,
 				DB10F0EA2C636C66009A28CA /* Preview Content */,
 			);
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB10F0E72C636C66009A28CA /* ContentView.swift in Sources */,
+				DB10F0F32C636C96009A28CA /* Song.swift in Sources */,
+				DB10F0F52C6371CC009A28CA /* SongCollection.swift in Sources */,
 				DB10F0E52C636C66009A28CA /* CDArkive2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
