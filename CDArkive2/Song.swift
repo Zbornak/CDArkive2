@@ -7,21 +7,17 @@
 
 import Foundation
 
-struct Song {
-    enum SongGenre {
-        case jazz, opera, classical, pop, rock, metal, hipHop, alternative, techno, emo, comedy
-    }
+struct Song: Codable, Identifiable {
+    var id = UUID()
+    var releaseDate: Date
+    var songGenre: String
+    var songName: String
+    var mainArtist: String
+    var supportArtists: [String]
+    var writers: [String]
+    var producers: [String]
+    var rating: Int
     
-    let id = UUID()
-    let releaseDate: Date
-    let songGenre: SongGenre
-    let songName: String
-    let mainArtist: String
-    let supportArtists: [String]
-    let writers: [String]
-    let producers: [String]
-    let rating: Int
-    
-    static let example = Song(releaseDate: Date.now, songGenre: .pop, songName: "Haru Yo, Koi", mainArtist: "Yumi Matsutoya", supportArtists: ["None"], writers: ["Yumi Matsutoya", "Ryutaro Hirota"], producers: ["Unknown"], rating: 5)
+    static let example = Song(releaseDate: Date.now, songGenre: "pop", songName: "Haru Yo, Koi", mainArtist: "Yumi Matsutoya", supportArtists: ["None"], writers: ["Yumi Matsutoya", "Ryutaro Hirota"], producers: ["Unknown"], rating: 5)
     
 }

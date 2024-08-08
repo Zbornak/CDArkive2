@@ -5,17 +5,36 @@
 //  Created by Mark Strijdom on 07/08/2024.
 //
 
+import SwiftData
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(\.modelContext) var modelContext
+    
+    @Query var songCollections: [SongCollection]
+    
+    let collectionTypes = ["Album", "Single", "E.P."]
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            List {
+                ForEach(songCollections) { collection in
+                    VStack {
+                        Text(collection.collectionName)
+                            .font(.headline)
+                    }
+                }
+                .onDelete(perform: deleteCollection)
+            }
+            .navigationTitle("CD Arkive 2")
         }
-        .padding()
+    }
+    
+    func deleteCollection(_ indexSet: IndexSet) {
+        for i in indexSet {
+            let collection = songCollections[i]
+            modelContext.delete(collection)
+        }
     }
 }
 

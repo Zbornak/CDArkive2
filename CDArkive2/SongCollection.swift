@@ -10,19 +10,16 @@ import SwiftData
 
 @Model
 class SongCollection {
-    enum CollectionType {
-        case single, ep, album
-    }
+    var id: UUID
+    var asin: Int
+    var releaseDate: Date
+    var collectionType: String
+    var collectionName: String
+    var artistName: String
+    var trackListing: [Song]
+    var notes: String
     
-    let id: UUID
-    let asin: Int
-    let releaseDate: Date
-    let collectionType: CollectionType
-    let collectionName: String
-    let artistName: String
-    let trackListing: [Song]
-    
-    init(id: UUID = UUID(), asin: Int = 0, releaseDate: Date = Date.now, collectionType: CollectionType = .album, collectionName: String = "", artistName: String = "", trackListing: [Song] = [Song.example]) {
+    init(id: UUID = UUID(), asin: Int = 0, releaseDate: Date = Date.now, collectionType: String = "Album", collectionName: String = "", artistName: String = "", trackListing: [Song] = [Song.example], notes: String = "") {
         self.id = id
         self.asin = asin
         self.releaseDate = releaseDate
@@ -30,5 +27,6 @@ class SongCollection {
         self.collectionName = collectionName
         self.artistName = artistName
         self.trackListing = trackListing
+        self.notes = notes
     }
 }

@@ -5,6 +5,7 @@
 //  Created by Mark Strijdom on 07/08/2024.
 //
 
+import SwiftData
 import SwiftUI
 
 @main
@@ -13,5 +14,6 @@ struct CDArkive2App: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: SongCollection.self)
     }
 }
