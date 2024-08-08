@@ -13,8 +13,32 @@ struct AddCollectionView: View {
     
     var body: some View {
         Form {
-            TextField("ASIN", value: $collection.asin, format: .number)
+            Section("collection type") {
+                Picker("Collection type", selection: $collection.collectionType) {
+                    Text("Album").tag(1)
+                    Text("E.P.").tag(2)
+                    Text("Single").tag(3)
+                }
+                .pickerStyle(.segmented)
+            }
+            
+            Section("details") {
+                TextField("ASIN", value: $collection.asin, format: .number)
+                
+                DatePicker("Release date", selection: $collection.releaseDate)
+                
+                TextField("Artist name", text: $collection.artistName)
+                
+                TextField("Collection name", text: $collection.collectionName)
+            }
+
+            Section("Notes") {
+                TextField("Notes", text: $collection.notes, axis: .vertical)
+            }
         }
+        .navigationTitle("Edit collection")
+        .navigationBarTitleDisplayMode(.inline)
+        
     }
 }
 

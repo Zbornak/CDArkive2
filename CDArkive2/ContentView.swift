@@ -13,8 +13,6 @@ struct ContentView: View {
     
     @Query var songCollections: [SongCollection]
     
-    let collectionTypes = ["Album", "Single", "E.P."]
-    
     var body: some View {
         NavigationStack {
             List {
